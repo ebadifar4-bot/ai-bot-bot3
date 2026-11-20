@@ -1,0 +1,23 @@
+# فقط برای کسانی که ترجیح می‌دهند دستی با wrangler دیپلوی کنند.
+# مسیر پیشنهادی: node setup.mjs (نیازی به این فایل ندارد)
+name = "ai-bot-bot3"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ai-bot-bot3-db"
+database_id = "a69d0b81-8557-4870-a59d-828f5ec3a777"
+
+[triggers]
+crons = ["* * * * *"]
+
+[vars]
+OWNER_ID = "123456789"
+BRAND_NAME = "My AI"
+WORKER_URL = "https://ai-bot.YOUR-SUBDOMAIN.workers.dev"
+
+# سکرت‌ها:  wrangler secret put TELEGRAM_TOKEN  /  wrangler secret put WEBHOOK_SECRET
